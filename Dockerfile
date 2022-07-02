@@ -15,7 +15,7 @@ FROM ubuntu:20.04 as chroot
 
 RUN /usr/sbin/useradd --no-create-home -u 1000 user
 
-COPY flag /
+#COPY flag /
 COPY server.py /home/user/
 
 RUN apt update && apt upgrade -y && apt install -y python3 git curl
